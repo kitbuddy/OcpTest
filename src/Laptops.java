@@ -28,7 +28,7 @@ public class Laptops {
         System.out.println(list1);
 
         Comparator<Laptops> comparator = (o1, o2) -> {
-            if(o1.getPrice() > o2.getPrice()) {
+            if(o1.getPrice() < o2.getPrice()) {
                 return 1;
             } else {
                 return -1;
@@ -38,6 +38,8 @@ public class Laptops {
         Collections.sort(list1, comparator);
 
         System.out.println("After Sorting");
-        System.out.println(list1);
+        list1.stream().forEach(a -> {
+            System.out.println(a);
+        });
     }
 }
