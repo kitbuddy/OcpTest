@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OcpTest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OcpTest_jar</output-path>
+    <root id="archive" name="OcpTest.jar">
+      <element id="module-output" name="OcpTest" />
+    </root>
+  </artifact>
+</component>
