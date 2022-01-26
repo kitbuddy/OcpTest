@@ -11,5 +11,7 @@ public class TestingPrintingIntefaceImpl implements IPrintingInterface{
 
         testingPrintingInteface.testDefaultPrintInInterface();
         testingPrintingInteface.testingPrinting();
+
+        IPrintingInterface.PrintViaStaticMethod();
     }
 }

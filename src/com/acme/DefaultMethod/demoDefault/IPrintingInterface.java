@@ -2,9 +2,15 @@ package com.acme.DefaultMethod.demoDefault;
 
 public interface IPrintingInterface {
 
-    public default void testDefaultPrintInInterface() {
+    default void testDefaultPrintInInterface() {
         System.out.println("testDefaultPrintInInterface in IPrintingInterface");
     }
 
-    public void testingPrinting();
+    void testingPrinting();
+
+    static void PrintViaStaticMethod() {
+        System.out.println(" static PrintViaStaticMethod from IPrintingInterface" );
+    }
+
+
 }
