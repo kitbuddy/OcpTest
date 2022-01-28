@@ -1,7 +1,5 @@
 package com.acme.DefaultMethod.demoDefault;
 
-import com.sun.tools.internal.ws.wsdl.document.soap.SOAP12Binding;
-
 public class car implements fourWheeler, vehicle {
     @Override
     public void print() {

@@ -7,6 +7,11 @@ class PrintViaAbstractClass extends testPrint{
     public void PrintAbstractMethod() {
         System.out.println(" printing PrintAbstractMethod via PrintViaAbstractClass ");
     }
+
+    /*@Override
+    public void printName() {
+        System.out.println(" the printName method is overridden in PrintViaAbstractClass");
+    }*/
 }
 
 public class abstractTest {
