@@ -1,4 +1,4 @@
-package com.acme.SingletonPatternDemo;
+package SingletonPatternDemo;
 
 public class SingletonPatternClass {
 

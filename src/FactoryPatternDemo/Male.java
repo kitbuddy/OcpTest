@@ -1,4 +1,4 @@
-package com.acme.FactoryPatternDemo;
+package FactoryPatternDemo;
 
 public class Male extends FactoryPattern.Person {
 
