@@ -2,13 +2,13 @@ package SingletonPatternDemo;
 
 public class SingletonPattern2Class {
 
-    public static SingletonPattern2Class singletonPatternClass;
+    public static SingletonPattern2Class singletonPattern2ClassObj;
     private SingletonPattern2Class() {
 
     }
 
     static {
-        singletonPatternClass = new SingletonPattern2Class();
+        singletonPattern2ClassObj = new SingletonPattern2Class();
     }
 
 }
