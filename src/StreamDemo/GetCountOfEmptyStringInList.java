@@ -44,6 +44,13 @@ public class GetCountOfEmptyStringInList {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (countInFirstMap, countInSecondMap) -> countInFirstMap + countInSecondMap));
 */
+
+        System.out.println(" ----listConverted-----");
+        List<String> listConverted = strList.parallelStream().map(String::toLowerCase)
+                .filter(x -> x.startsWith("p")).collect(Collectors.toList());
+
+        System.out.println(listConverted);
+
     }
 
     public static void main(String[] args) {
