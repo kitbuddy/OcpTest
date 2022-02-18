@@ -67,7 +67,8 @@ public class StreamExamples {
 
         /*Set*/
 
-        Set<Car> carSet = Stream.of(car1, car2, car3, car4).collect(Collectors.toSet());
+        Set<Car> carSet = Stream.of(car1, car2, car3, car4)
+                            .collect(Collectors.toSet());
 
         System.out.println("Car Set displayed");
         System.out.println(carSet);

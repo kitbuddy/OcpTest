@@ -1,12 +1,8 @@
-package StreamDemo;
+package DomainAndSubDomain;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-class ClicksCount {
-    String numberOfClicks;
-    String nameOfClicks;
-}
 
 public class DomainAndSubDomain {
 
