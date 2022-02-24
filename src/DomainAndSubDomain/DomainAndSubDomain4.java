@@ -1,10 +1,12 @@
 package DomainAndSubDomain;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
-public class DomainAndSubDomain2 {
+public class DomainAndSubDomain4 {
 
 /*
 
@@ -57,8 +59,8 @@ n: number of domains in the input
 
 
         public static void main(String[] argv) {
-            String[] counts = {
-                    "900,google.com",
+            String[] cpDomains = {
+                    "900 google.com",
                     "60,mail.yahoo.com",
                     "10,mobile.sports.yahoo.com",
                     "10,mail.sports.yahoo.com",
@@ -73,57 +75,35 @@ n: number of domains in the input
                     "1,google.co.uk"
             };
 
-            DomainAndSubDomain2.calculateClicksByDomain(counts);
+            System.out.println(DomainAndSubDomain4.calculateClicksByDomain(cpDomains));
 
         }
 
-    private static void calculateClicksByDomain(String[] counts) {
-            Map<String, String> valueMap = new HashMap<>();
-            Map<String, String> finalValueMap = new HashMap<>();
+    private static List<String> calculateClicksByDomain(String[] cpDomains) {
 
-        for (String val: counts) {
-            String[] row = val.split("\\,");
+            HashMap<String, Integer> map = new HashMap();
 
-            for (int i = 0; i < row.length-1; i++) {
-                valueMap.put(row[i+1], row[i]);
+            for (String str: cpDomains) {
+                String[] space = str.split("\\s+");
+                int num = Integer.valueOf(space[0]);
+
+                String[] dot = space[1].split("\\.");
+                String cumu = "";
+
+                for(int i = dot.length-1; i>=0; --i) {
+                    if (i == dot.length -1) {
+                        cumu = dot[i] + cumu;
+                    }
+                    map.put(cumu, map.getOrDefault(cumu, 0) + num);
+                }
             }
 
-        }
+            List<String> ret = new ArrayList<>();
 
-        valueMap.entrySet().forEach(entry -> {
-
-            String[] keyMap = entry.getKey().split("\\.");
-
-            System.out.println(Arrays.toString(keyMap));
-            for (String s: keyMap) {
-                finalValueMap.put(s, entry.getValue());
+            for( String i : map.keySet()) {
+                ret.add("" + (map.get(i)) + " " + i);
             }
-        });
-
-        System.out.println(finalValueMap);
+            return ret;
     }
 
-
-    private static List<String>  getNumberCountById( Map<Integer, String> flagMap) {
-       /* Map<Integer, String> flagMap = new HashMap<>();
-        flagMap.put(1, "India.com");*/
-
-        List<String> keyList = new ArrayList<>();
-
-        String[] allStringKeys = new String[0];
-
-        flagMap.entrySet().forEach(a -> keyList.add(a.getValue()));
-
-
-        for(String s : keyList) {
-            allStringKeys = s.split("\\.");
-
-        }
-
-        Arrays.stream(allStringKeys).forEach(a -> keyList.add(a));
-
-        keyList.stream().forEach(System.out::println);
-
-        return keyList;
-    }
 }
