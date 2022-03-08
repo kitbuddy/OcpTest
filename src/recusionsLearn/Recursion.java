@@ -40,6 +40,11 @@ public class Recursion {
         System.out.println("Reversed linked list ");
         list.printList(head);
 
+        System.out.println();
+        System.out.println("Merge two sorted Linked list");
+        printList(sortedMerge(new Node(15), new Node(20)));
+        System.out.println();
+        System.out.println("Merge two sorted Linked list");
     }
 
     public static String reverseString(String input) {
@@ -251,11 +256,25 @@ p - works really well with recursive structures like trees and graphs
         return p;
     }
 
-    void printList(Node node)
+    static void printList(Node node)
     {
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;
         }
     }
+
+    private static Node sortedMerge(Node A, Node B) {
+        if(A == null) return B;
+        if(B == null) return A;
+
+        if(A.data < B.data) {
+            A.next = sortedMerge(A.next, B);
+            return A;
+        } else {
+            B.next = sortedMerge(A, B.next);
+            return B;
+        }
+    }
+
 }
