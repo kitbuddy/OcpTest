@@ -1,4 +1,5 @@
-import java.io.*;
+package wayfair;
+
 import java.util.*;
 
 public class wayfair {
@@ -100,7 +101,7 @@ n: number of logs in the input
                     {"300", "user_10", "resource_5"}
             };
 
-//            wayfair.UserArrayMap(logs2);
+//            wayfair.wayfair.UserArrayMap(logs2);
             wayfair.breakOnUserMap(logs1);
         }
 
