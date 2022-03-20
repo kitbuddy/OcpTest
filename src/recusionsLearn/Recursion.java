@@ -45,7 +45,16 @@ public class Recursion {
         printList(sortedMerge(new Node(15), new Node(20)));
         System.out.println();
         System.out.println("Merge two sorted Linked list");
+
+
+        System.out.println();
+        System.out.println("Merge two sorted Linked list");
+        printList(insertnodeInBSD(new Node(15), 20));
+        System.out.println();
+        System.out.println("Merge two sorted Linked list");
     }
+
+
 
     public static String reverseString(String input) {
 
@@ -275,6 +284,10 @@ p - works really well with recursive structures like trees and graphs
             B.next = sortedMerge(A, B.next);
             return B;
         }
+    }
+
+    private static Node insertnodeInBSD(Node node, int i) {
+      return null;
     }
 
 }
