@@ -1,14 +1,10 @@
 package LeetCode;
 
-import recusionsLearn.FibbonacciMemoization;
-
-import java.util.Arrays;
-
-public class Arrauys {
+public class ArraysCheck {
 
     public static void main(String[] args) {
-        int[] response = Arrauys.searchRange(new int[]{1, 3}, 1);
-        Arrays.stream(response).forEach(System.out::println);
+        int[] response = ArraysCheck.searchRange(new int[]{1, 3}, 1);
+        java.util.Arrays.stream(response).forEach(System.out::println);
     }
     public static int[] searchRange(int[] nums, int target) {
         int[] output = {-1, -1};
