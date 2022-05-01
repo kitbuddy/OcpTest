@@ -105,14 +105,34 @@ n: number of logs in the input
                     {"300", "user_10", "resource_5"}
         };
 
-            System.out.println("log 1");
-            wayfair2.findStartAndEndTimeLogForUser(logs1);
-            System.out.println("log 2");
-            wayfair2.findStartAndEndTimeLogForUser(logs2);
-            System.out.println("log 3");
+//            System.out.println("log 1");
+//            wayfair2.findStartAndEndTimeLogForUser(logs1);
+//            System.out.println("log 2");
+//            wayfair2.findStartAndEndTimeLogForUser(logs2);
+//            System.out.println("log 3");
 
-            wayfair2.findStartAndEndTimeLogForUser(logs3);
+//            wayfair2.findStartAndEndTimeLogForUser(logs3);
+            wayfair2.findStartAndEndTimeLogForEachUser(logs1);
         }
+
+    private static void findStartAndEndTimeLogForEachUser(String[][] logs1) {
+
+        Set<String> userKeySet = new HashSet<>();
+
+        Map<String , Set<String>> timeMap = new HashMap<>();
+
+        for (int i = 0; i < logs1.length; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                userKeySet.add(logs1[i][1]);
+
+
+            }
+        }
+
+        userKeySet.forEach(System.out::println);
+    }
 
     private static void findStartAndEndTimeLogForUser(String[][] logs1) {
 
