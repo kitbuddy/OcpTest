@@ -6,3 +6,15 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# IntelliJ
+/out/
+
+# remove .class
+*.class
+
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/

@@ -1,7 +1,9 @@
 package LeetCode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Timer;
 
 public class ContainsDuplicateII_219 {
 
@@ -23,9 +25,30 @@ public class ContainsDuplicateII_219 {
     Output: false*/
 
     public static void main(String[] args) {
-        int[] nums = {1,0,1,1};
+        int[] nums = {1,0,1,14};
         int k = 1;
-        System.out.println(ContainsDuplicateII_219.getIndicesDuplicate(nums, k));
+//        System.out.println(ContainsDuplicateII_219.getIndicesDuplicate(nums, k));
+        System.out.println(ContainsDuplicateII_219.getIndicesDuplicate2(nums, k));
+    }
+
+    public static boolean getIndicesDuplicate2(int[] nums, int k) {
+//
+//        long start = System.nanoTime();
+//// some time passes
+//        long end = System.nanoTime();
+//        long elapsedTime = end - start;
+
+        HashSet<Integer> hs = new HashSet<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if(!hs.contains(nums[i])){ // making it slow to work
+//            if(!hs.add(nums[i])){
+
+//                System.out.println(elapsedTime);
+                return true;
+            }
+        }
+        return false;
 
     }
 
@@ -34,7 +57,6 @@ public class ContainsDuplicateII_219 {
         List<Integer> indicesList = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-
             int element = nums[i];
 
             if (element == k) {
